@@ -28,3 +28,11 @@ gapminder_unfiltered %>%
   sumdat
 ```
 
+```{r}
+sumdat %>% 
+  ggplot(aes(x=year,y=lifeExp)) +
+  geom_point(aes(color = country)) +
+  geom_smooth(method = "lm") +
+  theme_bw()
+```
+
